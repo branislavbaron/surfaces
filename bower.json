@@ -1,0 +1,24 @@
+{
+  "name": "radneploce",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "branislavbaron <branislavbaron@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "v4.0.0-beta",
+    "animate.css": "^3.5.2",
+    "waypoints": "^4.0.1",
+    "lightbox2": "^2.9.0",
+    "jquery": "^3.2.1"
+  }
+}

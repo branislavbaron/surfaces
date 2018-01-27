@@ -1,0 +1,46 @@
+@media (max-width: 575px) {
+	.container.top-nav {
+		.col-md-6 {
+			padding: 0;
+		ul {
+			margin: 0;
+			height: auto;
+			&.cont {
+				li {
+					border-bottom: 1px solid $theme-primary;
+				}
+			}
+			li {
+				background-color: transparent;
+				transform: none;
+				border: none;
+				display: block;
+				height: auto;
+				text-align: center;
+				&:first-child {
+					border-left: none;
+					padding-left: 0;
+				}
+				a {
+					color: white;
+					transform: none;
+					display: inline-block;
+					transition: all 1s;
+					padding: 0.7rem;
+					&:hover {
+						color: $theme-primary;
+					}
+				}
+			}
+			&.social-media {
+				width: 100%;
+				text-align: center;
+				li {
+					padding: 0;
+					display: inline-block;
+				}
+			}
+		}
+	}
+}
+}

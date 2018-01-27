@@ -1,0 +1,8 @@
+$skew: skew(30deg);
+$skewback: skew(-30deg);
+$theme-primary: rgb(225,210,171);
+$theme-primary-dark: darken($theme-primary, 10%);
+$theme-primary-ligt: lighten($theme-primary, 10%);
+$theme-secondary: rgb(22,21,17);
+$theme-secondary-light: lighten($theme-secondary, 5%);
+$theme-comp: #f6f6f4;

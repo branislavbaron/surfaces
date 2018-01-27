@@ -1,0 +1,34 @@
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
+    content: $content;
+    display: $display;
+    position: $pos;
+}
+
+@mixin input-placeholder {
+    &.placeholder { @content; }
+    &:-moz-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &:-ms-input-placeholder { @content; }
+    &::-webkit-input-placeholder { @content; }
+}
+
+@mixin box-shadow ($theme-secondary) {
+	-moz-box-shadow: 1px 1px 5px 1px $theme-secondary;
+	  -webkit-box-shadow: 1px 1px 5px 1px $theme-secondary;
+	  box-shadow:         1px 1px 5px 1px $theme-secondary;	
+}
+
+@mixin widthTransform {
+    -webkit-animation: widthAnimation 0.3s;
+    -webkit-animation-timing-function: ease-in;
+    -webkit-animation-fill-mode: forwards;
+
+    @-webkit-keyframes widthAnimation {
+          0% {
+            width: 20%;
+          }
+          100% {
+            width: 100%;
+          }
+        }
+}
