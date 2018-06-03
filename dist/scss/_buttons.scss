@@ -60,6 +60,7 @@
 	bottom: 0.7rem;
 	border-radius: 0;
 	right: 2rem;
+	cursor: pointer;
 	&:after {
 		@include pseudo;
 		border-color: transparent transparent $theme-primary $theme-primary;

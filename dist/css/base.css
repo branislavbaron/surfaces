@@ -52,7 +52,8 @@
   position: relative;
   bottom: 0.7rem;
   border-radius: 0;
-  right: 2rem; }
+  right: 2rem;
+  cursor: pointer; }
   #back-to-top:after {
     content: "";
     display: block;
@@ -331,6 +332,16 @@ ul, menu, dir {
   /* IE9 Compat Modes */
   src: url("../../fonts/Byron.eot?#iefix") format("embedded-opentype"), url("../../fonts/Byron.woff2") format("woff2"), url("../../fonts/Byron.woff") format("woff"), url("../../fonts/Byron.ttf") format("truetype"); }
 
+@font-face {
+  font-family: 'burnstowndam';
+  font-weight: lighter;
+  src: url("../../fonts/burnstowndam.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'BambooGothic-Book';
+  font-weight: lighter;
+  src: url("../../fonts/BambooGothic-Book.ttf") format("truetype"); }
+
 .signature {
   font-family: 'Byron', Fallback, sans-serif;
   font-size: 2.5rem; }
@@ -421,7 +432,10 @@ header {
   position: relative;
   z-index: 10; }
   .navbar .navbar-brand {
-    -webkit-animation-duration: 2s; }
+    -webkit-animation-duration: 2s;
+    padding: 0; }
+    .navbar .navbar-brand img {
+      width: 20%; }
   .navbar .navbar-nav {
     margin-top: 0; }
   .navbar .nav-item {
@@ -431,10 +445,22 @@ header {
     transform: skew(-30deg);
     transition: all 0.5s; }
     .navbar .nav-item.active {
-      background-color: #e1d2ab;
-      -moz-box-shadow: 1px 5px 15px -2px #161511;
-      -webkit-box-shadow: 1px 0px 15px -2px #161511;
-      box-shadow: 1px 0px 15px -2px #161511; }
+      background-color: #e1d2ab; }
+      .navbar .nav-item.active .page-border {
+        padding: 0.3rem 0;
+        position: relative;
+        font-weight: 500; }
+        .navbar .nav-item.active .page-border:after {
+          content: '';
+          position: absolute;
+          width: 20%;
+          height: 2px;
+          background-color: #c8af70;
+          bottom: -5%;
+          left: 5%;
+          transition: all 0.5s ease; }
+      .navbar .nav-item.active:hover .page-border:after {
+        width: 75%; }
     .navbar .nav-item:hover {
       background-color: #e1d2ab;
       color: #161511; }
@@ -554,7 +580,8 @@ header {
 .material {
   padding-top: 1rem;
   transform: skew(-30deg);
-  -webkit-animation-duration: 2s; }
+  -webkit-animation-duration: 2s;
+  transition: all 0.7s ease-in-out; }
   .material:hover {
     background-color: #e1d2ab; }
   .material.b-b {
@@ -674,7 +701,8 @@ footer .footer-top {
     background-color: #e1d2ab; }
   footer .footer-top .display-5 {
     margin-top: 0.5rem;
-    color: white; }
+    color: white;
+    letter-spacing: 0.3rem; }
     footer .footer-top .display-5.footer-social-heading {
       padding-bottom: 0.5rem;
       border-bottom: 1px solid #e1d2ab;
@@ -939,3 +967,9 @@ footer .footer-bottom {
     transition: all 0.5s; }
     #askq .card-header a:hover {
       color: #e1d2ab; }
+
+.offset-md-3 {
+  margin-left: 15%; }
+
+.company-name {
+  font-family: 'BambooGothic-Book', Fallback, sans-serif; }

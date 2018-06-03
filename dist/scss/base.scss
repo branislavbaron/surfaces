@@ -42,7 +42,16 @@ ul, menu, dir {
        url('../../fonts/Byron.woff') format('woff'), /* Pretty Modern Browsers */
        url('../../fonts/Byron.ttf')  format('truetype'), /* Safari, Android, iOS */
 }
-
+@font-face {
+  font-family: 'burnstowndam';
+  font-weight: lighter;
+  src: url('../../fonts/burnstowndam.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: 'BambooGothic-Book';
+  font-weight: lighter;
+  src: url('../../fonts/BambooGothic-Book.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
 .signature {
 	font-family: 'Byron', Fallback, sans-serif;
 	font-size: 2.5rem;
@@ -157,6 +166,10 @@ header {
 	z-index: 10;
 	.navbar-brand {
 		-webkit-animation-duration: 2s;
+		padding: 0;
+		img {
+			width: 20%;
+		}
 	}
 	.navbar-nav {
 		margin-top: 0;
@@ -169,9 +182,28 @@ header {
 		transition: all 0.5s;
 		&.active {
 			background-color: $theme-primary;
-			-moz-box-shadow: 1px 5px 15px -2px $theme-secondary;
-			  -webkit-box-shadow: 1px 0px 15px -2px $theme-secondary;
-			  box-shadow:         1px 0px 15px -2px $theme-secondary;	
+			.page-border {
+				padding: 0.3rem 0;
+				position: relative;
+				font-weight: 500;
+				&:after {
+					content: '';
+					position: absolute;
+					width: 20%;
+					height: 2px;
+					background-color: #c8af70;
+					bottom: -5%;
+					left: 5%;
+					transition: all 0.5s ease;
+				}
+			}
+			&:hover {
+				.page-border {
+					&:after {
+						width: 75%;
+					}
+				}
+			}
 		}
 		&:hover {
 			background-color: $theme-primary;
@@ -295,6 +327,7 @@ header {
 	padding-top: 1rem;
 	transform: $skewback;
 	-webkit-animation-duration: 2s;
+	transition: all 0.7s ease-in-out;
 	&:hover {
 		background-color: $theme-primary;
 	}
@@ -445,6 +478,7 @@ footer {
 		.display-5 {
 			margin-top: 0.5rem;
 			color: white;
+			letter-spacing: 0.3rem;
 			&.footer-social-heading {
 				padding-bottom: 0.5rem;
 				border-bottom: 1px solid $theme-primary;
@@ -775,4 +809,10 @@ footer {
 		}
 		
 	}
+}
+.offset-md-3 {
+	margin-left: 15%;
+}
+.company-name {
+	font-family: 'BambooGothic-Book', Fallback, sans-serif;
 }
