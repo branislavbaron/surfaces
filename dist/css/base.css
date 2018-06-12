@@ -442,8 +442,8 @@ header {
     text-transform: uppercase;
     letter-spacing: 0.2rem;
     margin: 0 0.1rem;
-    transform: skew(-30deg);
-    transition: all 0.5s; }
+    transition: all 0.5s;
+    position: relative; }
     .navbar .nav-item.active {
       background-color: #e1d2ab; }
       .navbar .nav-item.active .page-border {
@@ -465,8 +465,7 @@ header {
       background-color: #e1d2ab;
       color: #161511; }
     .navbar .nav-item .nav-link {
-      padding: 2rem 1rem;
-      transform: skew(30deg); }
+      padding: 2rem 1rem; }
     .navbar .nav-item .dropdown-toggle::after {
       transition: all 0.4s ease; }
     .navbar .nav-item .dropdown-toggle[aria-expanded=true]:after {
@@ -973,3 +972,85 @@ footer .footer-bottom {
 
 .company-name {
   font-family: 'BambooGothic-Book', Fallback, sans-serif; }
+
+@media only screen and (max-width: 600px) {
+  header .container.top-nav .cont {
+    height: auto;
+    text-align: center; }
+    header .container.top-nav .cont li {
+      display: block;
+      border: none; }
+  header .container.top-nav .social-media {
+    float: none !important;
+    text-align: center; }
+    header .container.top-nav .social-media li {
+      display: inline-block;
+      border: none; }
+  .navbar-toggler {
+    margin-right: 5%; }
+  .container-fluid {
+    margin-bottom: 5%; }
+  .material.b-r {
+    border: none; }
+  .material.b-b {
+    border: none; }
+  .list-unstyled li {
+    max-width: 100%; }
+  .footer-top .container .row {
+    margin: 0; }
+  .footer-top .container .row .col-md-3 {
+    margin: 5% 5%; }
+  .footer-top .container .row .col-md-3.contact-md {
+    margin: 0 15%;
+    text-align: center; }
+  .footer-top .container .row .col-md-6 {
+    margin: 0 10%; }
+  .navbar .navbar-nav {
+    margin: 20px; }
+  .usage-header:after {
+    right: 45.5%; }
+  .usage-header:before {
+    left: 45.5%; }
+  footer .footer-top .col-md-6 .ref {
+    width: 15.25rem;
+    height: 14.25rem; }
+  .img-presentation img {
+    width: 600px;
+    height: 50vh; }
+  .img-presentation .img-caption {
+    display: none; }
+  .carousel-indicators {
+    display: none; }
+  .carousel-inner .carousel-item img {
+    width: 600px;
+    height: 60vh; } }
+
+.p-10 {
+  padding: 10%; }
+
+.overlay:before {
+  content: '';
+  position: absolute;
+  width: 30%;
+  height: 2px;
+  bottom: 2rem;
+  background-color: #e1d2ab; }
+
+.overlay:after {
+  content: '';
+  position: absolute;
+  width: 30%;
+  height: 2px;
+  bottom: 2rem;
+  background-color: #e1d2ab;
+  right: 10%; }
+
+.overlay img {
+  position: absolute;
+  width: 10%;
+  right: 45%;
+  bottom: 1%; }
+
+@media only screen and (max-width: 600px) {
+  .overlay:before, .overlay:after {
+    bottom: 1.5rem; } }

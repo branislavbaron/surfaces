@@ -37,19 +37,18 @@ try {
 
 
     //Server settings
-    $mail->SMTPDebug = 0;                                 // Enable verbose debug output
+    $mail->SMTPDebug = 2;                               // Enable verbose debug output
     $mail->isSMTP();                                      // Set mailer to use SMTP
     $mail->Host = 'mail.wooddesigndenic.com';  // Specify main and backup SMTP servers
     $mail->SMTPAuth = true;                               // Enable SMTP authentication
     $mail->Username = 'contact@wooddesigndenic.com';                 // SMTP username
-    $mail->Password = 'vladaidenic';                           // SMTP password
-    $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+    $mail->Password = 'vladapetrovcic';                           // SMTP password
+    $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
     $mail->Port = 465;                                    // TCP port to connect to
 
     //Recipients
-    $mail->setFrom('from@example.com', 'Mailer');
-    $mail->addAddress('joe@example.net', 'Joe User');     // Add a recipient
-    $mail->addAddress('ellen@example.com');               // Name is optional
+    $mail->setFrom('' . $email, '' . $name);
+    $mail->addAddress('contact@wooddesigndenic.com');     //           // Name is optional
 
     //Content
     $mail->isHTML(true);                                  // Set email format to HTML
